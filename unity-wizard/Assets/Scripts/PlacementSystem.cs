@@ -11,12 +11,15 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] private Grid _grid;
     [SerializeField] private float _cellSize = 1f;
 
+    private Dictionary<Vector3Int, GameObject> _placedObjects = new Dictionary<Vector3Int, GameObject>();
+
     private Vector3 _currentGridPosition;
     private float _currentRotation;
+    private int _gridSize = 5;
 
     private void Start()
     {
-        _currentGridPosition =  Vector3.zero;
+        _currentGridPosition = Vector3.zero;
         UpdateIndicatorPosition();
     }
 
@@ -29,32 +32,65 @@ public class PlacementSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E)) RotateTile(45f);
         if (Input.GetKeyDown(KeyCode.Q)) RotateTile(-45f);
+
+        if (Input.GetKeyDown(KeyCode.R)) RemoveObject();
     }
 
 
     public void MoveTile(Vector3 direction)
     {
-        _currentGridPosition += direction * _cellSize;
+        Vector3 newPosition = _currentGridPosition + (direction * _cellSize);
+
+        float minLimit = -(_gridSize / 2) * _cellSize;
+        float maxLimit = (_gridSize / 2) * _cellSize;
+
+        newPosition.x = Mathf.Clamp(newPosition.x, minLimit, maxLimit);
+        newPosition.z = Mathf.Clamp(newPosition.z, minLimit, maxLimit);
+
+        _currentGridPosition = newPosition;
         UpdateIndicatorPosition();
     }
+
     public void RotateTile(float angle)
     {
         _currentRotation += angle;
         _cellIndicator.transform.localRotation = Quaternion.Euler(0, _currentRotation, 0);
+
+        Vector3Int gridPosition = _grid.WorldToCell(_currentGridPosition);
+
+        if (_placedObjects.ContainsKey(gridPosition))
+        {
+            _placedObjects[gridPosition].transform.localRotation = Quaternion.Euler(0, _currentRotation, 0);
+        }
     }
 
     public void PlaceObject(GameObject objectPrefab)
     {
-        if(objectPrefab != null)
+        Vector3Int gridPosition = _grid.WorldToCell(_currentGridPosition);
+
+        if (!_placedObjects.ContainsKey(gridPosition))
         {
-            Vector3 spawnPosition = _cellIndicator.transform.position;
-            GameObject newObject = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(0, _currentRotation, 0), _spawnParent);
+            if (objectPrefab != null)
+            {
+                Vector3 spawnPosition = _cellIndicator.transform.position;
+                GameObject newObject = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(0, _currentRotation, 0), _spawnParent);
+                _placedObjects.Add(gridPosition, newObject);
+            }
         }
     }
 
+    public void RemoveObject()
+    {
+        Vector3Int gridPosition = _grid.WorldToCell(_currentGridPosition);
+        if (_placedObjects.ContainsKey(gridPosition))
+        {
+            Destroy(_placedObjects[gridPosition]);
+            _placedObjects.Remove(gridPosition);
+        }
+    }
 
     private void UpdateIndicatorPosition()
     {
-       _cellIndicator.transform.localPosition = _currentGridPosition;
+        _cellIndicator.transform.localPosition = _currentGridPosition;
     }
 }
