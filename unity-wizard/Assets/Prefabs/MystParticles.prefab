@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8634650184879770703}
   - component: {fileID: 5690348241830964300}
   - component: {fileID: 1629903083311207903}
-  - component: {fileID: 8362950979479851354}
   m_Layer: 0
   m_Name: MystParticles
   m_TagString: Untagged
@@ -27,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8453194048803149478}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7525759, y: 0, z: 0, w: 0.6585056}
-  m_LocalPosition: {x: -0.095, y: -0.907, z: 0.455}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.095, y: -0.907, z: 0.371}
   m_LocalScale: {x: 0.7213982, y: 0.7213982, z: 0.7213982}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4849,24 +4848,3 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!95 &8362950979479851354
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8453194048803149478}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 97b435f29400fb34cb37c1b01c52153f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
