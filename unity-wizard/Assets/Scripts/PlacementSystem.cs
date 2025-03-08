@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class PlacementSystem : MonoBehaviour
 {
+    [SerializeField] private GameObject[] _placeableObjects;
     [SerializeField] private GameObject _cellIndicator;
+    [SerializeField] private Transform _spawnParent;
     [SerializeField] private Grid _grid;
     [SerializeField] private float _cellSize = 1f;
 
@@ -40,6 +42,16 @@ public class PlacementSystem : MonoBehaviour
         _currentRotation += angle;
         _cellIndicator.transform.localRotation = Quaternion.Euler(0, _currentRotation, 0);
     }
+
+    public void PlaceObject(GameObject objectPrefab)
+    {
+        if(objectPrefab != null)
+        {
+            Vector3 spawnPosition = _cellIndicator.transform.position;
+            GameObject newObject = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(0, _currentRotation, 0), _spawnParent);
+        }
+    }
+
 
     private void UpdateIndicatorPosition()
     {
