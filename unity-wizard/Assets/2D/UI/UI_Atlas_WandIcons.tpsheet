@@ -1,0 +1,34 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://assetstore.unity.com/packages/tools/sprite-management/texturepacker-importer-16641
+#
+# created with Free texture packer v0.6.7
+# http://free-tex-packer.com
+#
+:format=40300
+:texture=UI_Atlas_WandIcons.png
+:size=512x512
+:pivotpoints=enabled
+:borders=disabled
+
+UI_Wand_Delete.png;3;463;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Material_Bone.png;3;411;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Material_Silver.png;3;359;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Material_Wood.png;3;307;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Move.png;3;255;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Move_Down.png;3;203;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Move_Left.png;3;151;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Move_Right.png;3;99;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Move_Up.png;3;47;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Rotate.png;55;463;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Rotate_AntiClock.png;107;463;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Spawn.png;159;463;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Spawn_Beds.png;211;463;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Spawn_Chairs.png;263;463;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Spawn_Chest.png;315;463;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Spawn_Decoration.png;367;463;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Spawn_Kitchens.png;419;463;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Spawn_Tables.png;55;411;46;46; 0.5;0.5; 0;0;0;0
+UI_Wand_Rotate_Clock.png;55;463;46;46; 0.5;0.5; 0;0;0;0
