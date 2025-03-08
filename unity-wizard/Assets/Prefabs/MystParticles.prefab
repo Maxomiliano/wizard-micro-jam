@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8453194048803149478}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7525732, y: -0, z: -0, w: 0.6585086}
+  m_LocalRotation: {x: -0.7525759, y: 0, z: 0, w: 0.6585056}
   m_LocalPosition: {x: -0.095, y: -0.907, z: 0.455}
   m_LocalScale: {x: 0.7213982, y: 0.7213982, z: 0.7213982}
   m_ConstrainProportionsScale: 0
@@ -42,7 +42,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8453194048803149478}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -117,7 +117,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 35
+      scalar: 80
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -170,7 +170,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.051
+      scalar: 0.025
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -666,7 +666,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 85.65
+    angle: 90
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -996,8 +996,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.50636727
-          value: 0.97486734
+          time: 0.6614881
+          value: 0.9000015
           inSlope: -1.3722315
           outSlope: -1.3722315
           tangentMode: 0
@@ -1005,8 +1005,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.7551721
-          value: 0.17436887
+          time: 0.75848323
+          value: 0.3160391
           inSlope: -1.5368099
           outSlope: -1.5368099
           tangentMode: 0
@@ -1328,8 +1328,8 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 0.16470589}
+        key2: {r: 0, g: 0, b: 0, a: 0.10980392}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
