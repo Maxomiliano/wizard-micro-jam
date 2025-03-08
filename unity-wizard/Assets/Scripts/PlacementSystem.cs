@@ -13,6 +13,7 @@ public class PlacementSystem : MonoBehaviour
 
     private Vector3 _currentGridPosition;
     private float _currentRotation;
+    private int _gridSize = 5;
 
     private void Start()
     {
@@ -34,9 +35,20 @@ public class PlacementSystem : MonoBehaviour
 
     public void MoveTile(Vector3 direction)
     {
-        _currentGridPosition += direction * _cellSize;
+        //_currentGridPosition += direction * _cellSize;
+
+        Vector3 newPosition = _currentGridPosition + (direction * _cellSize);
+
+        float minLimit = -(_gridSize / 2) * _cellSize;
+        float maxLimit = (_gridSize / 2) * _cellSize;
+
+        newPosition.x = Mathf.Clamp(newPosition.x, minLimit, maxLimit);
+        newPosition.z = Mathf.Clamp(newPosition.z, minLimit, maxLimit);
+
+        _currentGridPosition = newPosition;
         UpdateIndicatorPosition();
     }
+
     public void RotateTile(float angle)
     {
         _currentRotation += angle;
