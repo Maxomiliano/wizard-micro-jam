@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 275565598}
   - component: {fileID: 275565597}
   m_Layer: 5
-  m_Name: Btn1
+  m_Name: BtnLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3291,6 +3291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705459921}
   - component: {fileID: 705459922}
+  - component: {fileID: 705459923}
   m_Layer: 5
   m_Name: MenuRotar
   m_TagString: Untagged
@@ -3327,6 +3328,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705459920}
   m_CullTransparentMesh: 1
+--- !u!114 &705459923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705459920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f1daa39e6423f43aa6c6ea770b9742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _placementSystem: {fileID: 2116052221}
+  _leftButton: {fileID: 275565597}
+  _rightButton: {fileID: 1670057587}
 --- !u!1 &711594926
 GameObject:
   m_ObjectHideFlags: 0
@@ -5078,6 +5094,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025995093}
   m_CullTransparentMesh: 1
+--- !u!4 &1088616601 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2304760953497033091, guid: 257dd4c4740e9b140a317bd8a43879e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1938491325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1119593974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6226,6 +6248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325394701}
   - component: {fileID: 1325394702}
+  - component: {fileID: 1325394703}
   m_Layer: 5
   m_Name: MenuCrear
   m_TagString: Untagged
@@ -6266,6 +6289,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325394700}
   m_CullTransparentMesh: 1
+--- !u!114 &1325394703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325394700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fb69bfea5f60846a9580ae6d8e0943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _placementSystem: {fileID: 2116052221}
+  _objectsButtons:
+  - {fileID: 1000294866}
+  - {fileID: 1473956467}
+  - {fileID: 731807766}
+  - {fileID: 465810293}
+  - {fileID: 524298767}
+  - {fileID: 599345219}
+  _objectsPrefabs:
+  - {fileID: 4697276535091322707, guid: 1beb0532378c3fb46a9ebee59a4cdbcb, type: 3}
+  - {fileID: 4846362832853612792, guid: 26ae16ced5b9c18499a75002f58c4d84, type: 3}
 --- !u!1 &1345513787
 GameObject:
   m_ObjectHideFlags: 0
@@ -7019,7 +7065,7 @@ GameObject:
   - component: {fileID: 1670057588}
   - component: {fileID: 1670057587}
   m_Layer: 5
-  m_Name: Btn2
+  m_Name: BtnRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7331,6 +7377,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4294647530859713721, guid: 88c4e62911c842949913f957866ded6c,
+        type: 3}
+      propertyPath: _spawnParent
+      value: 
+      objectReference: {fileID: 1088616601}
     - target: {fileID: 4294647530859713721, guid: 88c4e62911c842949913f957866ded6c,
         type: 3}
       propertyPath: _cellIndicator
