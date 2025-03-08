@@ -7360,11 +7360,6 @@ PrefabInstance:
       propertyPath: _cellIndicator
       value: 
       objectReference: {fileID: 151483559}
-    - target: {fileID: 4650951426318299837, guid: 88c4e62911c842949913f957866ded6c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5240334760741583234, guid: 88c4e62911c842949913f957866ded6c,
         type: 3}
       propertyPath: _camera

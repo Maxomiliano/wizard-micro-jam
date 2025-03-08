@@ -44,10 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686bea13a2ca6bc4f824e9d5d1333faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseIndicator: {fileID: 4650951426318299837}
   _cellIndicator: {fileID: 0}
-  _inputManager: {fileID: 5240334760741583234}
   _grid: {fileID: 2265977060680139628}
+  _cellSize: 0.1
 --- !u!1 &2271215584028086356
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5159457761730217001
 Transform:
   m_ObjectHideFlags: 0
