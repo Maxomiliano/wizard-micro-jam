@@ -9,12 +9,14 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] private GameObject _cellIndicator;
     //[SerializeField] private InputManager _inputManager;
     [SerializeField] private Grid _grid;
+    [SerializeField] private float _cellSize = 1f;
 
-    private Vector3Int _currentGridPosition;
+    private Vector3 _currentGridPosition;
 
     private void Start()
     {
-        _currentGridPosition = _grid.WorldToCell(Vector3.zero);
+        //_currentGridPosition = _grid.WorldToCell(Vector3.zero);
+        _currentGridPosition =  Vector3.zero;
         UpdateIndicatorPosition();
     }
 
@@ -26,20 +28,20 @@ public class PlacementSystem : MonoBehaviour
         _mouseIndicator.transform.position = mousePosition;
         _cellIndicator.transform.position = _grid.CellToWorld(gridPosition);
         */
-        if (Input.GetKeyDown(KeyCode.W)) MoveTile(new Vector3Int(0, 0, 1));
-        if (Input.GetKeyDown(KeyCode.S)) MoveTile(new Vector3Int(0, 0, -1));
-        if (Input.GetKeyDown(KeyCode.A)) MoveTile(new Vector3Int(-1, 0, 0));
-        if (Input.GetKeyDown(KeyCode.D)) MoveTile(new Vector3Int(1, 0, 0));
+        if (Input.GetKeyDown(KeyCode.W)) MoveTile(new Vector3(0, 0, 1));
+        if (Input.GetKeyDown(KeyCode.S)) MoveTile(new Vector3(0, 0, -1));
+        if (Input.GetKeyDown(KeyCode.A)) MoveTile(new Vector3(-1, 0, 0));
+        if (Input.GetKeyDown(KeyCode.D)) MoveTile(new Vector3(1, 0, 0));
     }
 
-    public void MoveTile(Vector3Int direction)
+    public void MoveTile(Vector3 direction)
     {
-        _currentGridPosition += direction;
+        _currentGridPosition += direction * _cellSize;
         UpdateIndicatorPosition();
     }
 
     private void UpdateIndicatorPosition()
     {
-       _cellIndicator.transform.position = _grid.CellToWorld(_currentGridPosition);
+       _cellIndicator.transform.localPosition = _currentGridPosition;
     }
 }
