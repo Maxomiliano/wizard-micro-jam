@@ -6,6 +6,7 @@ public class SpellsMenu : MonoBehaviour
 {
     [SerializeField] GameObject m_spellCanvas;
     [SerializeField] GameObject m_wandParticles;
+    [SerializeField] BoxCollider m_cameraRotation;
 
     void Update()
     {
@@ -13,6 +14,7 @@ public class SpellsMenu : MonoBehaviour
         {
             m_spellCanvas.SetActive(true);
             m_wandParticles.SetActive(true);
+            m_cameraRotation.enabled = false;
         }
     }
 }
