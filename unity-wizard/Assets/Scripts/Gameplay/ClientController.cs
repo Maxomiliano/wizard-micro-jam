@@ -20,8 +20,15 @@ public class ClientController : MonoBehaviour
 
     private Dictionary<int, int> _materialAffinity = new Dictionary<int, int>();
 
+
+    private void Start()
+    {
+        SetNewClient();
+    }
+
     void SetNewClient()
     {
+        Debug.Log("SetNewClient() ha sido llamado!");
         int i = Random.Range(0, m_clients.Length);
         m_bodyRenderer.sprite = m_clients[i];
         switch (i)
@@ -63,27 +70,23 @@ public class ClientController : MonoBehaviour
                 m_faceRenderer.sprite = m_goblinFaces[0];
                 break;
         }
-        //m_faceRenderer.sprite = m_faces[0];
     }
 
-    public void SetClientMood()
+    public void SetClientMood(Dictionary<int, int> materialCounters)
     {
         int totalScore = 0;
         int totalObjects = 0;
 
-        foreach (var material in _materialAffinity)
+        foreach (var material in materialCounters)
         {
             if(_materialAffinity.ContainsKey(material.Key))
             {
-                totalScore += _materialAffinity[material.Key] * material.Value;
-                totalObjects += material.Value;
+                totalScore += _materialAffinity[material.Key] * materialCounters[material.Key];
+                totalObjects += materialCounters[material.Key];
             }
         }
 
-        if (totalObjects == 0)
-        {
-            return;
-        }
+        if (totalObjects == 0) return;
         
         float moodScore = (float)totalScore / totalObjects;
         Sprite newFace = null;
@@ -101,5 +104,10 @@ public class ClientController : MonoBehaviour
         {
             m_faceRenderer.sprite = newFace;
         }
+    }
+
+    public void UpdateMaterialCounters(Dictionary<int, int> materialCounters)
+    {
+        SetClientMood(materialCounters);
     }
 }

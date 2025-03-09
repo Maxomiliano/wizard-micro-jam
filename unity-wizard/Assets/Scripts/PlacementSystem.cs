@@ -118,6 +118,11 @@ public class PlacementSystem : MonoBehaviour
             {
                 Debug.Log($"Material {pair.Key}: {pair.Value} objetos");
             }
+
+            if (_clientController != null)
+            {
+                _clientController.UpdateMaterialCounters(_materialCounters);
+            }
         }
     }
 
@@ -168,6 +173,13 @@ public class PlacementSystem : MonoBehaviour
                     _materialCounters[_selectedMaterial] = 1;
                 }
             }
+
+            if (_clientController != null)
+            {
+                _clientController.UpdateMaterialCounters(_materialCounters);
+            }
+
+
             _lastPlaceableObject.SetMaterial(_selectedMaterial);
             Debug.Log($"Material confirmado: {_selectedMaterial}");
             foreach (var pair in _materialCounters)
@@ -175,7 +187,6 @@ public class PlacementSystem : MonoBehaviour
                 Debug.Log($"Material {pair.Key}: {pair.Value} objetos");
             }
             _selectedMaterial = -1;
-            _clientController.SetClientMood();
         }
     }
 }
