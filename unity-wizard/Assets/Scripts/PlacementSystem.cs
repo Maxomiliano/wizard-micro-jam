@@ -11,6 +11,10 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] private Grid _grid;
     [SerializeField] private float _cellSize = 1f;
 
+    [SerializeField] private Color _freeColor = Color.green;
+    [SerializeField] private Color _occupiedColor = Color.red;
+    private Renderer _cellRenderer;
+
     private Dictionary<Vector3Int, GameObject> _placedObjects = new Dictionary<Vector3Int, GameObject>();
 
     private Vector3 _currentGridPosition;
@@ -19,6 +23,7 @@ public class PlacementSystem : MonoBehaviour
 
     private void Start()
     {
+        _cellRenderer = _cellIndicator.GetComponentInChildren<Renderer>();
         _currentGridPosition = Vector3.zero;
         UpdateIndicatorPosition();
     }
@@ -67,7 +72,11 @@ public class PlacementSystem : MonoBehaviour
     public void PlaceObject(GameObject objectPrefab)
     {
         Vector3Int gridPosition = _grid.WorldToCell(_currentGridPosition);
-
+        if (_placedObjects.ContainsKey(gridPosition))
+        {
+            Debug.Log("No puedes colocar un objeto aquí. Celda ocupada.");
+            return;
+        }
         if (!_placedObjects.ContainsKey(gridPosition))
         {
             if (objectPrefab != null)
@@ -92,5 +101,15 @@ public class PlacementSystem : MonoBehaviour
     private void UpdateIndicatorPosition()
     {
         _cellIndicator.transform.localPosition = _currentGridPosition;
+
+        Vector3Int gridPosition = _grid.WorldToCell(_currentGridPosition);
+        if (_placedObjects.ContainsKey(gridPosition))
+        {
+            _cellRenderer.material.color = _occupiedColor;
+        }
+        else
+        {
+            _cellRenderer.material.color = _freeColor;
+        }
     }
 }
