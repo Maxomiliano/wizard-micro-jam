@@ -86,7 +86,19 @@ public class ClientController : MonoBehaviour
             }
         }
 
-        if (totalObjects == 0) return;
+        if (totalObjects == 0)
+        {
+            if (m_bodyRenderer.sprite == m_clients[0]) // Fairy
+                m_faceRenderer.sprite = m_fairyFaces[0];
+            else if (m_bodyRenderer.sprite == m_clients[1]) // Vampiro
+                m_faceRenderer.sprite = m_vampireFaces[0];
+            else if (m_bodyRenderer.sprite == m_clients[2]) // Hombre lobo
+                m_faceRenderer.sprite = m_werewolfFaces[0];
+            else if (m_bodyRenderer.sprite == m_clients[3]) // Goblin
+                m_faceRenderer.sprite = m_goblinFaces[0];
+
+            return;
+        }
 
         float moodScore = (float)totalScore / totalObjects;
         Sprite newFace = null;
