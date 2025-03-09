@@ -13,6 +13,7 @@ public class PlacementSystem : MonoBehaviour
 
     [SerializeField] private Color _freeColor = Color.green;
     [SerializeField] private Color _occupiedColor = Color.red;
+    [SerializeField] private ClientController _clientController;
 
     private Dictionary<Vector3Int, GameObject> _placedObjects = new Dictionary<Vector3Int, GameObject>();
     private Dictionary<int, int> _materialCounters = new Dictionary<int, int>();
@@ -174,6 +175,7 @@ public class PlacementSystem : MonoBehaviour
                 Debug.Log($"Material {pair.Key}: {pair.Value} objetos");
             }
             _selectedMaterial = -1;
+            _clientController.SetClientMood();
         }
     }
 }
