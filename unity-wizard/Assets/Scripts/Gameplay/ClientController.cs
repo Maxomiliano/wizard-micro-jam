@@ -12,7 +12,8 @@ public class ClientController : MonoBehaviour
     [SerializeField] Sprite[] m_werewolfFaces;
     [SerializeField] Sprite[] m_goblinFaces;
 
-    [SerializeField] private Sprite[] m_faces;
+    //[SerializeField] private Sprite[] m_faces;
+
 
     [SerializeField] SpriteRenderer m_bodyRenderer;
     [SerializeField] SpriteRenderer m_faceRenderer;
@@ -26,43 +27,43 @@ public class ClientController : MonoBehaviour
         switch (i)
         {
             case 0:
-                m_faces = m_fairyFaces;
                 _materialAffinity = new Dictionary<int, int>
                 {
                     { 0, 1}, //Madera favorito +1
                     { 1, 0}, //Hueso neutro 0
                     { 2, -1} //Plata enojado -1
                 };
+                m_faceRenderer.sprite = m_fairyFaces[0];
                 break;
             case 1:
-                m_faces = m_vampireFaces;
                 _materialAffinity = new Dictionary<int, int>
                 {
                     { 0, 1},
                     { 1, 0},
                     { 2, -1}
                 };
+                m_faceRenderer.sprite = m_vampireFaces[0];
                 break;
             case 2:
-                m_faces = m_werewolfFaces;
                 _materialAffinity = new Dictionary<int, int>
                 {
                     { 0, -1},
                     { 1, 1},
                     { 2, 0}
                 };
+                m_faceRenderer.sprite = m_werewolfFaces[0];
                 break;
             case 3:
-                m_faces = m_goblinFaces;
                 _materialAffinity = new Dictionary<int, int>
                 {
                     { 0, 0},
                     { 1, -1},
                     { 2, 1}
                 };
+                m_faceRenderer.sprite = m_goblinFaces[0];
                 break;
         }
-        m_faceRenderer.sprite = m_faces[0];
+        //m_faceRenderer.sprite = m_faces[0];
     }
 
     public void SetClientMood()
@@ -81,22 +82,24 @@ public class ClientController : MonoBehaviour
 
         if (totalObjects == 0)
         {
-            m_faceRenderer.sprite = m_faces[0];
             return;
         }
+        
         float moodScore = (float)totalScore / totalObjects;
+        Sprite newFace = null;
 
-        if (moodScore > 2)
+        if (m_bodyRenderer.sprite == m_clients[0]) // Fairy
+            newFace = moodScore > 0 ? m_fairyFaces[1] : (moodScore < 0 ? m_fairyFaces[2] : m_fairyFaces[0]);
+        else if (m_bodyRenderer.sprite == m_clients[1]) // Vampiro
+            newFace = moodScore > 0 ? m_vampireFaces[1] : (moodScore < 0 ? m_vampireFaces[2] : m_vampireFaces[0]);
+        else if (m_bodyRenderer.sprite == m_clients[2]) // Hombre lobo
+            newFace = moodScore > 0 ? m_werewolfFaces[1] : (moodScore < 0 ? m_werewolfFaces[2] : m_werewolfFaces[0]);
+        else if (m_bodyRenderer.sprite == m_clients[3]) // Goblin
+            newFace = moodScore > 0 ? m_goblinFaces[1] : (moodScore < 0 ? m_goblinFaces[2] : m_goblinFaces[0]);
+
+        if (newFace != null)
         {
-            m_faceRenderer.sprite = m_faces[1];
-        }
-        else if (moodScore < 0)
-        {
-            m_faceRenderer.sprite = m_faces[2];
-        }
-        else
-        {
-            m_faceRenderer.sprite = m_faces[0];
+            m_faceRenderer.sprite = newFace;
         }
     }
 }
