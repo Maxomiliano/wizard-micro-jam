@@ -127,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 463
+        y: 411
         width: 46
         height: 46
       alignment: 0
@@ -148,7 +148,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 411
+        y: 359
         width: 46
         height: 46
       alignment: 0
@@ -169,7 +169,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 359
+        y: 307
         width: 46
         height: 46
       alignment: 0
@@ -190,7 +190,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 307
+        y: 255
         width: 46
         height: 46
       alignment: 0
@@ -211,7 +211,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 255
+        y: 203
         width: 46
         height: 46
       alignment: 0
@@ -232,7 +232,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 203
+        y: 151
         width: 46
         height: 46
       alignment: 0
@@ -253,7 +253,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 151
+        y: 99
         width: 46
         height: 46
       alignment: 0
@@ -274,7 +274,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 99
+        y: 47
         width: 46
         height: 46
       alignment: 0
@@ -294,8 +294,8 @@ TextureImporter:
       name: UI_Wand_Move_Up.png
       rect:
         serializedVersion: 2
-        x: 3
-        y: 47
+        x: 55
+        y: 463
         width: 46
         height: 46
       alignment: 0
@@ -315,7 +315,7 @@ TextureImporter:
       name: UI_Wand_Rotate.png
       rect:
         serializedVersion: 2
-        x: 55
+        x: 159
         y: 463
         width: 46
         height: 46
@@ -336,7 +336,7 @@ TextureImporter:
       name: UI_Wand_Rotate_AntiClock.png
       rect:
         serializedVersion: 2
-        x: 107
+        x: 211
         y: 463
         width: 46
         height: 46
@@ -357,7 +357,7 @@ TextureImporter:
       name: UI_Wand_Rotate_Clock.png
       rect:
         serializedVersion: 2
-        x: 55
+        x: 159
         y: 463
         width: 46
         height: 46
@@ -378,7 +378,7 @@ TextureImporter:
       name: UI_Wand_Spawn.png
       rect:
         serializedVersion: 2
-        x: 159
+        x: 263
         y: 463
         width: 46
         height: 46
@@ -399,7 +399,7 @@ TextureImporter:
       name: UI_Wand_Spawn_Beds.png
       rect:
         serializedVersion: 2
-        x: 211
+        x: 315
         y: 463
         width: 46
         height: 46
@@ -420,7 +420,7 @@ TextureImporter:
       name: UI_Wand_Spawn_Chairs.png
       rect:
         serializedVersion: 2
-        x: 263
+        x: 367
         y: 463
         width: 46
         height: 46
@@ -441,7 +441,7 @@ TextureImporter:
       name: UI_Wand_Spawn_Chest.png
       rect:
         serializedVersion: 2
-        x: 315
+        x: 419
         y: 463
         width: 46
         height: 46
@@ -462,8 +462,8 @@ TextureImporter:
       name: UI_Wand_Spawn_Decoration.png
       rect:
         serializedVersion: 2
-        x: 367
-        y: 463
+        x: 55
+        y: 411
         width: 46
         height: 46
       alignment: 0
@@ -483,8 +483,8 @@ TextureImporter:
       name: UI_Wand_Spawn_Kitchens.png
       rect:
         serializedVersion: 2
-        x: 419
-        y: 463
+        x: 55
+        y: 359
         width: 46
         height: 46
       alignment: 0
@@ -505,7 +505,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 411
+        y: 307
         width: 46
         height: 46
       alignment: 0
@@ -521,6 +521,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Confirm.png
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc86d1cde380cd044b481b2810d78dd9
+      internalID: 1615107528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Return.png
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f341b3cf69e60264f9257fb2f74e5edf
+      internalID: 1183596441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -532,6 +574,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      UI_Wand_Confirm.png: 1615107528
       UI_Wand_Delete.png: 1248731352
       UI_Wand_Material_Bone.png: -138694712
       UI_Wand_Material_Silver.png: 1900207291
@@ -541,6 +584,7 @@ TextureImporter:
       UI_Wand_Move_Left.png: 39208614
       UI_Wand_Move_Right.png: -334974313
       UI_Wand_Move_Up.png: 711553946
+      UI_Wand_Return.png: 1183596441
       UI_Wand_Rotate.png: 926563570
       UI_Wand_Rotate_AntiClock.png: 2049147771
       UI_Wand_Rotate_Clock.png: 1309773964
