@@ -15,12 +15,14 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] private Color _occupiedColor = Color.red;
 
     private Dictionary<Vector3Int, GameObject> _placedObjects = new Dictionary<Vector3Int, GameObject>();
+    private Dictionary<int, int> _materialCounters = new Dictionary<int, int>();
 
     private PlaceableObject _lastPlaceableObject;
     private Renderer _cellRenderer;
     private Vector3 _currentGridPosition;
     private float _currentRotation;
     private int _gridSize = 5;
+    private int _selectedMaterial = -1;
 
 
     private void Start()
@@ -28,6 +30,11 @@ public class PlacementSystem : MonoBehaviour
         _cellRenderer = _cellIndicator.GetComponentInChildren<Renderer>();
         _currentGridPosition = Vector3.zero;
         UpdateIndicatorPosition();
+
+        for (int i = 0; i < 3; i++)
+        {
+            _materialCounters[i] = 0;
+        }
     }
 
     private void Update()
@@ -87,6 +94,10 @@ public class PlacementSystem : MonoBehaviour
                 GameObject newObject = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(0, _currentRotation, 0), _spawnParent);
                 _placedObjects.Add(gridPosition, newObject);
                 _lastPlaceableObject = newObject.GetComponent<PlaceableObject>();
+
+                int materialIndex = _lastPlaceableObject.GetCurrentMaterialIndex();
+                _materialCounters[materialIndex]++;
+                Debug.Log($"Material agregado {_materialCounters[materialIndex]}");
             }
         }
     }
@@ -96,6 +107,10 @@ public class PlacementSystem : MonoBehaviour
         Vector3Int gridPosition = _grid.WorldToCell(_currentGridPosition);
         if (_placedObjects.ContainsKey(gridPosition))
         {
+            PlaceableObject objectToRemove = _placedObjects[gridPosition].GetComponent<PlaceableObject>();
+            int materialIndex = objectToRemove.GetCurrentMaterialIndex();
+            _materialCounters[materialIndex]--;
+
             Destroy(_placedObjects[gridPosition]);
             _placedObjects.Remove(gridPosition);
         }
@@ -120,7 +135,28 @@ public class PlacementSystem : MonoBehaviour
     {
         if (_lastPlaceableObject != null)
         {
+            //int previousMaterial = _lastPlaceableObject.GetCurrentMaterialIndex();
+            _selectedMaterial = materialIndex;
             _lastPlaceableObject.SetMaterial(materialIndex);
+
+           // _materialCounters[previousMaterial]--;
+            //_materialCounters[materialIndex]++;
+        }
+    }
+
+    public void ConfirmMaterialSelection()
+    {
+        if (_lastPlaceableObject != null && _selectedMaterial != -1)
+        {
+            int previousMaterial = _lastPlaceableObject.GetCurrentMaterialIndex();
+            if (previousMaterial != _selectedMaterial)
+            {
+                _materialCounters[previousMaterial]--;
+                _materialCounters[_selectedMaterial]++;
+            }
+
+            _lastPlaceableObject.SetMaterial(_selectedMaterial);
+            _selectedMaterial = -1;
         }
     }
 }

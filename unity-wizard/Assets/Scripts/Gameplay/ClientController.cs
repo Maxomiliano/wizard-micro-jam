@@ -38,4 +38,9 @@ public class ClientController : MonoBehaviour
         }
         m_faceRenderer.sprite = m_faces[0];
     }
+
+    private void SetClientMood()
+    {
+        
+    }
 }
