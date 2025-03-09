@@ -24,6 +24,18 @@ public class PlaceableObject : MonoBehaviour
         _currentMaterialIndex = index;
     }
 
+    public void SetPreviewMaterial(int materialIndex)
+    {
+        if (materialIndex >= 0 && materialIndex < _materialVariants.Length)
+        {
+            foreach(var variant in _materialVariants)
+            {
+                variant.gameObject.SetActive(false);
+            }
+            _materialVariants[materialIndex].gameObject.SetActive(true);
+        }
+    }
+
     public int GetCurrentMaterialIndex()
     {
         return _currentMaterialIndex;

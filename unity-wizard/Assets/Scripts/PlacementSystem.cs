@@ -140,7 +140,7 @@ public class PlacementSystem : MonoBehaviour
         if (_lastPlaceableObject != null)
         {
             _selectedMaterial = materialIndex ;
-            //_lastPlaceableObject.SetMaterial(_selectedMaterial);
+            _lastPlaceableObject.SetPreviewMaterial(_selectedMaterial);
             Debug.Log($"Material cambiado visualmente a {_selectedMaterial}, pero aún no confirmado.");
         }
     }
