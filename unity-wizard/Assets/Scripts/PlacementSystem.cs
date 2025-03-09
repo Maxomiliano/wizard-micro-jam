@@ -94,10 +94,6 @@ public class PlacementSystem : MonoBehaviour
                 GameObject newObject = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(0, _currentRotation, 0), _spawnParent);
                 _placedObjects.Add(gridPosition, newObject);
                 _lastPlaceableObject = newObject.GetComponent<PlaceableObject>();
-
-                int materialIndex = _lastPlaceableObject.GetCurrentMaterialIndex();
-                _materialCounters[materialIndex]++;
-                Debug.Log($"Material agregado {_materialCounters[materialIndex]}");
             }
         }
     }
@@ -109,10 +105,18 @@ public class PlacementSystem : MonoBehaviour
         {
             PlaceableObject objectToRemove = _placedObjects[gridPosition].GetComponent<PlaceableObject>();
             int materialIndex = objectToRemove.GetCurrentMaterialIndex();
-            _materialCounters[materialIndex]--;
+            if (_materialCounters.ContainsKey(materialIndex))
+            { 
+                _materialCounters[materialIndex]--;
+            }
 
             Destroy(_placedObjects[gridPosition]);
             _placedObjects.Remove(gridPosition);
+            Debug.Log($"Objeto eliminado. Material {materialIndex} actualizado.");
+            foreach (var pair in _materialCounters)
+            {
+                Debug.Log($"Material {pair.Key}: {pair.Value} objetos");
+            }
         }
     }
 
@@ -135,12 +139,9 @@ public class PlacementSystem : MonoBehaviour
     {
         if (_lastPlaceableObject != null)
         {
-            //int previousMaterial = _lastPlaceableObject.GetCurrentMaterialIndex();
             _selectedMaterial = materialIndex;
-            _lastPlaceableObject.SetMaterial(materialIndex);
-
-           // _materialCounters[previousMaterial]--;
-            //_materialCounters[materialIndex]++;
+            _lastPlaceableObject.SetMaterial(_selectedMaterial);
+            Debug.Log($"Material cambiado visualmente a {_selectedMaterial}, pero aún no confirmado.");
         }
     }
 
@@ -149,13 +150,29 @@ public class PlacementSystem : MonoBehaviour
         if (_lastPlaceableObject != null && _selectedMaterial != -1)
         {
             int previousMaterial = _lastPlaceableObject.GetCurrentMaterialIndex();
+
             if (previousMaterial != _selectedMaterial)
             {
-                _materialCounters[previousMaterial]--;
-                _materialCounters[_selectedMaterial]++;
-            }
+                if (_materialCounters.ContainsKey(previousMaterial))
+                {
+                    _materialCounters[previousMaterial] = Mathf.Max(0, _materialCounters[previousMaterial] - 1);
+                }
 
+                if (_materialCounters.ContainsKey(_selectedMaterial))
+                {
+                    _materialCounters[_selectedMaterial]++;
+                }
+                else
+                {
+                    _materialCounters[_selectedMaterial] = 1;
+                }
+            }
             _lastPlaceableObject.SetMaterial(_selectedMaterial);
+            Debug.Log($"Material confirmado: {_selectedMaterial}");
+            foreach (var pair in _materialCounters)
+            {
+                Debug.Log($"Material {pair.Key}: {pair.Value} objetos");
+            }
             _selectedMaterial = -1;
         }
     }

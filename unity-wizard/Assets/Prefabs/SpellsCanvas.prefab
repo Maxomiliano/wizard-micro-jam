@@ -7695,6 +7695,7 @@ GameObject:
   - component: {fileID: 4028356948682494257}
   - component: {fileID: 8219913105038555536}
   - component: {fileID: 990903931394823856}
+  - component: {fileID: 4864791947212177079}
   m_Layer: 5
   m_Name: BtnConfirm
   m_TagString: Untagged
@@ -7804,6 +7805,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4864791947212177079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8876812233513645702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad74eff806582c42a37caf6ee0428e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _placementSystem: {fileID: 0}
+  _confirmButton: {fileID: 990903931394823856}
 --- !u!1 &9200001302889715583
 GameObject:
   m_ObjectHideFlags: 0
