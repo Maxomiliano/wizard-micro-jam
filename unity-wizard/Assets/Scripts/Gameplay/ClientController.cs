@@ -36,36 +36,36 @@ public class ClientController : MonoBehaviour
             case 0:
                 _materialAffinity = new Dictionary<int, int>
                 {
-                    { 0, 1}, //Madera favorito +1
-                    { 1, 0}, //Hueso neutro 0
-                    { 2, -1} //Plata enojado -1
+                    { (int)MaterialType.Wood, 0 },
+                    { (int)MaterialType.Bone, 1 },
+                    { (int)MaterialType.Silver, -1 }
                 };
                 m_faceRenderer.sprite = m_fairyFaces[0];
                 break;
             case 1:
                 _materialAffinity = new Dictionary<int, int>
                 {
-                    { 0, 1},
-                    { 1, 0},
-                    { 2, -1}
+                    { (int)MaterialType.Wood, 1 },
+                    { (int)MaterialType.Bone, 0 },
+                    { (int)MaterialType.Silver, -1 }
                 };
                 m_faceRenderer.sprite = m_vampireFaces[0];
                 break;
             case 2:
                 _materialAffinity = new Dictionary<int, int>
                 {
-                    { 0, -1},
-                    { 1, 1},
-                    { 2, 0}
+                    { (int)MaterialType.Wood, -1 },
+                    { (int)MaterialType.Bone, 1 },
+                    { (int)MaterialType.Silver, 0 }
                 };
                 m_faceRenderer.sprite = m_werewolfFaces[0];
                 break;
             case 3:
                 _materialAffinity = new Dictionary<int, int>
                 {
-                    { 0, 0},
-                    { 1, -1},
-                    { 2, 1}
+                    { (int)MaterialType.Wood, 0 },
+                    { (int)MaterialType.Bone, -1 },
+                    { (int)MaterialType.Silver, 1 }
                 };
                 m_faceRenderer.sprite = m_goblinFaces[0];
                 break;
@@ -79,7 +79,7 @@ public class ClientController : MonoBehaviour
 
         foreach (var material in materialCounters)
         {
-            if(_materialAffinity.ContainsKey(material.Key))
+            if (_materialAffinity.ContainsKey(material.Key))
             {
                 totalScore += _materialAffinity[material.Key] * materialCounters[material.Key];
                 totalObjects += materialCounters[material.Key];
@@ -87,7 +87,7 @@ public class ClientController : MonoBehaviour
         }
 
         if (totalObjects == 0) return;
-        
+
         float moodScore = (float)totalScore / totalObjects;
         Sprite newFace = null;
 

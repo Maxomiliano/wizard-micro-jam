@@ -3,6 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum MaterialType
+{
+    None = 0,
+    Wood = 1,
+    Bone = 2,
+    Silver = 3
+}
+
 public class PlacementSystem : MonoBehaviour
 {
     [SerializeField] private GameObject[] _placeableObjects;
@@ -95,6 +103,13 @@ public class PlacementSystem : MonoBehaviour
                 GameObject newObject = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(0, _currentRotation, 0), _spawnParent);
                 _placedObjects.Add(gridPosition, newObject);
                 _lastPlaceableObject = newObject.GetComponent<PlaceableObject>();
+
+                int materialIndex = _lastPlaceableObject.GetCurrentMaterialIndex();
+                AddMaterial((MaterialType)materialIndex);
+                if (_clientController != null)
+                {
+                    _clientController.UpdateMaterialCounters(_materialCounters);
+                }
             }
         }
     }
@@ -188,5 +203,16 @@ public class PlacementSystem : MonoBehaviour
             }
             _selectedMaterial = -1;
         }
+    }
+
+    private void AddMaterial(MaterialType material)
+    {
+        int materialID = (int)material;
+        if (!_materialCounters.ContainsKey(materialID))
+        {
+            _materialCounters[materialID] = 0;
+        }
+        _materialCounters[materialID]++;
+        Debug.Log($"Material {materialID}: {_materialCounters[materialID]} objetos");
     }
 }
