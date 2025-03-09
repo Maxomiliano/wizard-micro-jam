@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2051654602125300537}
   - component: {fileID: 784462788818664511}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WandContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6188006043137545319}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WandIdle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7658068819941371979}
   - component: {fileID: 4163051568415178197}
   - component: {fileID: 6951052848660440593}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 472738360094547369}
   - component: {fileID: 2305873789903314873}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
