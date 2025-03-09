@@ -13,13 +13,15 @@ public class PlacementSystem : MonoBehaviour
 
     [SerializeField] private Color _freeColor = Color.green;
     [SerializeField] private Color _occupiedColor = Color.red;
-    private Renderer _cellRenderer;
 
     private Dictionary<Vector3Int, GameObject> _placedObjects = new Dictionary<Vector3Int, GameObject>();
 
+    private PlaceableObject _lastPlaceableObject;
+    private Renderer _cellRenderer;
     private Vector3 _currentGridPosition;
     private float _currentRotation;
     private int _gridSize = 5;
+
 
     private void Start()
     {
@@ -84,6 +86,7 @@ public class PlacementSystem : MonoBehaviour
                 Vector3 spawnPosition = _cellIndicator.transform.position;
                 GameObject newObject = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(0, _currentRotation, 0), _spawnParent);
                 _placedObjects.Add(gridPosition, newObject);
+                _lastPlaceableObject = newObject.GetComponent<PlaceableObject>();
             }
         }
     }
@@ -110,6 +113,14 @@ public class PlacementSystem : MonoBehaviour
         else
         {
             _cellRenderer.material.color = _freeColor;
+        }
+    }
+
+    public void ChangeObjectMaterial(int materialIndex)
+    {
+        if (_lastPlaceableObject != null)
+        {
+            _lastPlaceableObject.SetMaterial(materialIndex);
         }
     }
 }
