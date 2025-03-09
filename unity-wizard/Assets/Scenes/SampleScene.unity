@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_spellCanvas: {fileID: 1231500949}
   m_wandParticles: {fileID: 0}
+  m_cameraRotation: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +837,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1128522365}
+    - target: {fileID: 4864791947212177079, guid: 182995417b8fedd498af14c329d099b9,
+        type: 3}
+      propertyPath: _placementSystem
+      value: 
+      objectReference: {fileID: 2116052221}
     - target: {fileID: 4914748015806204651, guid: 182995417b8fedd498af14c329d099b9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

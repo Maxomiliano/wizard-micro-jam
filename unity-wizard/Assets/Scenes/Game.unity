@@ -613,6 +613,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1128522365}
+    - target: {fileID: 4864791947212177079, guid: 182995417b8fedd498af14c329d099b9,
+        type: 3}
+      propertyPath: _placementSystem
+      value: 
+      objectReference: {fileID: 2116052221}
     - target: {fileID: 4914748015806204651, guid: 182995417b8fedd498af14c329d099b9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1223,6 +1228,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 63.281, y: -141.753, z: -141.981}
+--- !u!114 &1120240491 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4036138612778394609, guid: cb035908a65800342b85497a6b1c1bba,
+    type: 3}
+  m_PrefabInstance: {fileID: 2852141168600691500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c511d896b6aca43af64da34ba4bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1128522365 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 784462788818664511, guid: 3683d681c7e305f4dba9aa6b287c8a1a,
@@ -1723,6 +1740,11 @@ PrefabInstance:
       propertyPath: _cellIndicator
       value: 
       objectReference: {fileID: 151483559}
+    - target: {fileID: 4294647530859713721, guid: 88c4e62911c842949913f957866ded6c,
+        type: 3}
+      propertyPath: _clientController
+      value: 
+      objectReference: {fileID: 1120240491}
     - target: {fileID: 4650951426318299837, guid: 88c4e62911c842949913f957866ded6c,
         type: 3}
       propertyPath: m_Layer
