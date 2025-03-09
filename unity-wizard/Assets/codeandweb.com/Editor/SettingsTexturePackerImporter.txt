@@ -1,0 +1,11 @@
+version: 2
+tpsheetFileNames:
+- Assets/2D/UI/UI_Atlas_WandIcons.tpsheet
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+textureFileNames:
+- Assets/2D/UI/UI_Atlas_WandIcons.png
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+normalmapFileNames:
+- 
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+enableDebugOutput: 0

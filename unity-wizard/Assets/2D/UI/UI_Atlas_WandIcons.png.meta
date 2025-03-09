@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,24 +37,24 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -121,18 +121,436 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: UI_Wand_Delete.png
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168b2ceefe4d70e44b918b65e81abe75
+      internalID: 1248731352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Material_Bone.png
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 411
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d067727399240b14d87540c8113eb820
+      internalID: -138694712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Material_Silver.png
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 359
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6116d39247d75de43b6bd50e6a06f2e2
+      internalID: 1900207291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Material_Wood.png
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 307
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ace12455379fa345b1b3e84ffeb97fe
+      internalID: 660643522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Move.png
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 255
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd445be9d962f4f4f9232d4d3f5c93dc
+      internalID: 1967815817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Move_Down.png
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 203
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b2c92b68dab6540a5bb3b35e9ea094
+      internalID: 468490540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Move_Left.png
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 151
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83359489f5b320a41b1ee6d44464c9b5
+      internalID: 39208614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Move_Right.png
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 99
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b525523d37f6e478c324354e9588af
+      internalID: -334974313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Move_Up.png
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 47
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948d76da1c6ea4f4a96d763cc7b8ce3a
+      internalID: 711553946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Rotate.png
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f6fa68667fbf8459b352958d8f9f97
+      internalID: 926563570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Rotate_AntiClock.png
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a090df436d89ed41999d932ff1f0035
+      internalID: 2049147771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Rotate_Clock.png
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1069bb76df132944aa083c811a375bd
+      internalID: 1309773964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Spawn.png
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f065b0ebe520843a7a45172c876102
+      internalID: -1066643179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Spawn_Beds.png
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff22be970e1ad37489888e82b47a746e
+      internalID: 428980328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Spawn_Chairs.png
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c466e69fe57e84790278d8fdb1eee4
+      internalID: -1810653568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Spawn_Chest.png
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3466dba9aa852c2488a7ccfdc0e9c561
+      internalID: -403951391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Spawn_Decoration.png
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c1b1521c7fe914f82fb8de31949d39
+      internalID: 961645716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Spawn_Kitchens.png
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 463
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43beaeb88ae276b47a4d384f4194d54f
+      internalID: -2054909077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Wand_Spawn_Tables.png
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 411
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5eaa02c29286074ebfe681a746e746e
+      internalID: -539410689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_Wand_Delete.png: 1248731352
+      UI_Wand_Material_Bone.png: -138694712
+      UI_Wand_Material_Silver.png: 1900207291
+      UI_Wand_Material_Wood.png: 660643522
+      UI_Wand_Move.png: 1967815817
+      UI_Wand_Move_Down.png: 468490540
+      UI_Wand_Move_Left.png: 39208614
+      UI_Wand_Move_Right.png: -334974313
+      UI_Wand_Move_Up.png: 711553946
+      UI_Wand_Rotate.png: 926563570
+      UI_Wand_Rotate_AntiClock.png: 2049147771
+      UI_Wand_Rotate_Clock.png: 1309773964
+      UI_Wand_Spawn.png: -1066643179
+      UI_Wand_Spawn_Beds.png: 428980328
+      UI_Wand_Spawn_Chairs.png: -1810653568
+      UI_Wand_Spawn_Chest.png: -403951391
+      UI_Wand_Spawn_Decoration.png: 961645716
+      UI_Wand_Spawn_Kitchens.png: -2054909077
+      UI_Wand_Spawn_Tables.png: -539410689
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
