@@ -15,4 +15,5 @@ public class TilePositionButtons : MonoBehaviour
         _leftButton.onClick.AddListener(() => _placementSystem.MoveTile(new Vector3Int(-1, 0, 0)));
         _rightButton.onClick.AddListener(() => _placementSystem.MoveTile(new Vector3Int(1, 0, 0)));
     }
+
 }

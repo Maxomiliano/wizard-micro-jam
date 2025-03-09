@@ -2594,6 +2594,7 @@ MonoBehaviour:
   _woodMaterialButton: {fileID: 1119593976}
   _boneMaterialButton: {fileID: 475397528}
   _silverMaterialButton: {fileID: 965669029}
+  _exitButton: {fileID: 1225162391}
 --- !u!1 &546418230
 GameObject:
   m_ObjectHideFlags: 0
