@@ -7404,8 +7404,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 8.006019, y: 0.42831528, z: 4.5141873}
-  m_Center: {x: 3.9772897, y: 0.20400006, z: -1.7570937}
+  m_Size: {x: 8.006019, y: 0.528662, z: 4.5141873}
+  m_Center: {x: 3.9772897, y: 0.25417343, z: -1.7570937}
 --- !u!1 &1562459378
 GameObject:
   m_ObjectHideFlags: 0
@@ -8212,6 +8212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrystalBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977126715805651793, guid: 257dd4c4740e9b140a317bd8a43879e2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.316
       objectReference: {fileID: 0}
     - target: {fileID: 7552564775758183919, guid: 257dd4c4740e9b140a317bd8a43879e2,
         type: 3}

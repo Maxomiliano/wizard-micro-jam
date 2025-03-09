@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6188030484591455450}
   - component: {fileID: 3959765207642829471}
   - component: {fileID: 6075419476195702271}
+  - component: {fileID: 4994187219282108117}
   m_Layer: 0
   m_Name: MystParticlesPixelArt
   m_TagString: Untagged
@@ -116,7 +117,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -668,7 +669,7 @@ ParticleSystem:
     angle: 27.4
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.13
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -751,7 +752,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.88
+      value: 0.78
       mode: 0
       spread: 0
       speed:
@@ -870,7 +871,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 16
+      scalar: 30
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1328,10 +1329,10 @@ ParticleSystem:
         serializedVersion: 2
         key0: {r: 0.94117653, g: 0.5411765, b: 1, a: 0}
         key1: {r: 1, g: 0.9686275, b: 0.5803922, a: 0.16470589}
-        key2: {r: 0, g: 0, b: 0, a: 0.10980392}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
+        key2: {r: 0, g: 0, b: 0, a: 0.8235294}
+        key3: {r: 0, g: 0, b: 0, a: 0.19215687}
+        key4: {r: 0, g: 0, b: 0, a: 0.47058824}
+        key5: {r: 0, g: 0, b: 0, a: 0.10980392}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 11441
@@ -1343,26 +1344,26 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 11192
-        atime2: 31710
-        atime3: 41286
-        atime4: 65535
-        atime5: 0
-        atime6: 0
-        atime7: 0
+        atime1: 6218
+        atime2: 10073
+        atime3: 13679
+        atime4: 17037
+        atime5: 29721
+        atime6: 41286
+        atime7: 65535
         m_Mode: 0
         m_ColorSpace: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 5
+        m_NumAlphaKeys: 8
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0.9686275, b: 0.5803922, a: 0}
         key1: {r: 0.94117653, g: 0.5411765, b: 1, a: 0.85490197}
-        key2: {r: 0.94117653, g: 0.5411765, b: 1, a: 0.8392157}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
+        key2: {r: 0.94117653, g: 0.5411765, b: 1, a: 0.22745098}
+        key3: {r: 0, g: 0, b: 0, a: 0.24313726}
+        key4: {r: 0, g: 0, b: 0, a: 0.18431373}
+        key5: {r: 0, g: 0, b: 0, a: 0.8352941}
+        key6: {r: 0, g: 0, b: 0, a: 0.8392157}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 15171
         ctime1: 44146
@@ -1374,16 +1375,16 @@ ParticleSystem:
         ctime7: 0
         atime0: 0
         atime1: 4352
-        atime2: 34944
-        atime3: 43151
-        atime4: 0
-        atime5: 0
-        atime6: 0
-        atime7: 0
+        atime2: 8207
+        atime3: 11565
+        atime4: 15296
+        atime5: 19524
+        atime6: 34944
+        atime7: 43151
         m_Mode: 0
         m_ColorSpace: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 4
+        m_NumAlphaKeys: 8
   UVModule:
     serializedVersion: 2
     enabled: 0
@@ -4848,3 +4849,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &4994187219282108117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2582564178608380896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0354cef95d7a84e89edf1bc677a1e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fps: 6
