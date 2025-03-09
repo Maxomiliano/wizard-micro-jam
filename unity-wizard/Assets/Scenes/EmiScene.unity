@@ -817,7 +817,7 @@ Transform:
   m_GameObject: {fileID: 372906213}
   serializedVersion: 2
   m_LocalRotation: {x: 0.24129626, y: -0, z: -0, w: 0.97045153}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.246, y: -0.07099998, z: 0.102}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -908,7 +908,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 45
+  field of view: 34
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1531,7 +1531,7 @@ Transform:
   m_GameObject: {fileID: 1527927455}
   serializedVersion: 2
   m_LocalRotation: {x: 0.24129626, y: -0, z: -0, w: 0.97045153}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.246, y: -0.07099998, z: 0.102}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1622,7 +1622,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 45
+  field of view: 34
   orthographic: 0
   orthographic size: 5
   m_Depth: 1
@@ -1919,17 +1919,17 @@ PrefabInstance:
     - target: {fileID: 472738360094547369, guid: 3683d681c7e305f4dba9aa6b287c8a1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.33299997
+      value: 0.08699997
       objectReference: {fileID: 0}
     - target: {fileID: 472738360094547369, guid: 3683d681c7e305f4dba9aa6b287c8a1a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.794
+      value: -0.865
       objectReference: {fileID: 0}
     - target: {fileID: 472738360094547369, guid: 3683d681c7e305f4dba9aa6b287c8a1a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.745
+      value: 0.847
       objectReference: {fileID: 0}
     - target: {fileID: 472738360094547369, guid: 3683d681c7e305f4dba9aa6b287c8a1a,
         type: 3}
@@ -2089,6 +2089,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7025949963596999419, guid: 4110543bd6a19974bb87657f547b43a0,
         type: 3}
+      propertyPath: field of view
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025949963596999419, guid: 4110543bd6a19974bb87657f547b43a0,
+        type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 55
       objectReference: {fileID: 0}
@@ -2100,17 +2105,17 @@ PrefabInstance:
     - target: {fileID: 8346078510649575253, guid: 4110543bd6a19974bb87657f547b43a0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.246
       objectReference: {fileID: 0}
     - target: {fileID: 8346078510649575253, guid: 4110543bd6a19974bb87657f547b43a0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.071
       objectReference: {fileID: 0}
     - target: {fileID: 8346078510649575253, guid: 4110543bd6a19974bb87657f547b43a0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.102
       objectReference: {fileID: 0}
     - target: {fileID: 8346078510649575253, guid: 4110543bd6a19974bb87657f547b43a0,
         type: 3}
