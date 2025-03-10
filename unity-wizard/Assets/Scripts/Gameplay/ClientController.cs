@@ -13,10 +13,10 @@ public class ClientController : MonoBehaviour
     [SerializeField] Sprite[] m_goblinFaces;
 
     //[SerializeField] private Sprite[] m_faces;
-
-
     [SerializeField] SpriteRenderer m_bodyRenderer;
     [SerializeField] SpriteRenderer m_faceRenderer;
+
+    [SerializeField] Animator m_clientAnimator;
 
     private Dictionary<int, int> _materialAffinity = new Dictionary<int, int>();
 
@@ -26,9 +26,10 @@ public class ClientController : MonoBehaviour
         SetNewClient();
     }
 
-    void SetNewClient()
+    public void SetNewClient()
     {
         Debug.Log("SetNewClient() ha sido llamado!");
+
         int i = Random.Range(0, m_clients.Length);
         m_bodyRenderer.sprite = m_clients[i];
         switch (i)
@@ -70,6 +71,13 @@ public class ClientController : MonoBehaviour
                 m_faceRenderer.sprite = m_goblinFaces[0];
                 break;
         }
+    }
+
+    public void SubmitClient()
+    {
+        m_clientAnimator = GetComponent<Animator>();
+        m_clientAnimator.SetTrigger("Out");
+        FindObjectOfType<PlacementSystem>()?.ClearAllObjects();
     }
 
     public void SetClientMood(Dictionary<int, int> materialCounters)
@@ -122,4 +130,6 @@ public class ClientController : MonoBehaviour
     {
         SetClientMood(materialCounters);
     }
+
+
 }

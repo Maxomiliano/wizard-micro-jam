@@ -215,4 +215,26 @@ public class PlacementSystem : MonoBehaviour
         _materialCounters[materialID]++;
         Debug.Log($"Material {materialID}: {_materialCounters[materialID]} objetos");
     }
+
+    public void ClearAllObjects()
+    {
+        foreach (var obj in _placedObjects.Values)
+        {
+            Destroy(obj);
+        }
+
+        _placedObjects.Clear();
+        _materialCounters.Clear();
+
+        for (int i = 0; i < 3; i++)
+        {
+            _materialCounters[i] = 0;
+        }
+
+        if (_clientController != null)
+        {
+            _clientController.UpdateMaterialCounters(_materialCounters);
+        }
+        Debug.Log("Objetos y contadores reiniciados");
+    }
 }
