@@ -259,6 +259,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood-Cofre
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1e4b6e1ecaeee8a4c935d4921b6c8472,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -347,6 +352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Silver-Cofre
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8161f85795f9bae43b9a5eb266dec202,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -457,6 +467,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood-Cofre
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1e4b6e1ecaeee8a4c935d4921b6c8472,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -545,6 +560,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bones-Cofre
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0a3a01cf9599484c8dc628d250a43a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
